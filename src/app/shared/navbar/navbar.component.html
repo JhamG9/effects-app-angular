@@ -1,0 +1,22 @@
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" routerLink="home">Effects</a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="usuario/1">Usuario</a>
+          </li>
+        </ul>
+        <div class="d-flex" role="search">
+          <input #txtInput (keyup.enter)="irUsuario(txtInput.value)" class="form-control me-2" type="search" placeholder="ID usuario" aria-label="Search">
+          <button (click)="irUsuario(txtInput.value)" class="btn btn-outline-success" type="button">Buscar</button>
+        </div>
+      </div>
+    </div>
+  </nav>
